@@ -1,11 +1,11 @@
 
     <?php 
-        echo "123"
+        echo "123";
         //echo $_POST['FirstName']; 
         
         $servername = "localhost";
         $username = "root";
-        $password = "rhelper"
+        $password = "rhelper";
         $dbname = "mysql";
         // Create connection
         /*
