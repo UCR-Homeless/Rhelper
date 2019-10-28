@@ -1,7 +1,6 @@
 
     <?php 
         echo "123";
-        phpinfo();
         //echo $_POST['FirstName']; 
         
         $servername = "localhost";
@@ -28,7 +27,7 @@
         }
         $conn->close();
         */
-        $dbc = mysql_connect(servername, username, password, dbname);
+        $dbc = mysqli_connect(servername, username, password, dbname);
 
         if (isset($_POST['submit'])) {
             $FirstName = $_POST['FirstName'];
