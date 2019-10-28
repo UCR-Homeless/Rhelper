@@ -1,6 +1,7 @@
 
     <?php 
         echo "123";
+        phpinfo();
         //echo $_POST['FirstName']; 
         
         $servername = "localhost";
