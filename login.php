@@ -28,7 +28,7 @@
         }
         $conn->close();
         */
-        $dbc = mysqli_connect(servername, username, password, dbname);
+        $dbc = mysql_connect(servername, username, password, dbname);
 
         if (isset($_POST['submit'])) {
             $FirstName = $_POST['FirstName'];
