@@ -6,7 +6,7 @@ require_once 'dbConfig.php';
 $userData = json_decode($_POST['userData']);
 
 if(!empty($userData)){
-    // The user's profile info
+    // The user's profile infsuo
     $oauth_provider = $_POST['oauth_provider'];
     $oauth_uid  = !empty($userData->id)?$userData->id:'';
     $first_name = !empty($userData->given_name)?$userData->given_name:'';
