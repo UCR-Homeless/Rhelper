@@ -13,6 +13,7 @@
 	<button type="submit">Register</button>
     </form>
     <?php 
+        echo "123"
         echo $_POST['FirstName']; 
         /*
         $servername = "localhost";
