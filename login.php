@@ -1,25 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<title>rhelper - General login test</title>
-<meta charset="utf-8">
-<body>
-    <h1> Register</h1>
-    <form action="/" method="POST">
-        First Name: <input type="text" name="FirstName"><br>
-        Last Name: <input type="text" name="LastName"><br>
-        Email: <input type="text" name="Email"><br>
-        SID: <input type="text" name="SID"><br>
-        Password: <input type="text" name="Password"><br>
-	<button type="submit">Register</button>
-    </form>
+
     <?php 
         echo "123"
-        echo $_POST['FirstName']; 
-        /*
+        //echo $_POST['FirstName']; 
+        
         $servername = "localhost";
         $username = "root";
+        $password = "rhelper"
         $dbname = "mysql";
         // Create connection
+        /*
         $conn = new mysqli($servername, $username, $password, $dbname);
         // Check connection
         if ($conn->connect_error) {
@@ -38,6 +27,18 @@
         }
         $conn->close();
         */
+        $dbc = mysqli_connect(servername, username, password, dbname);
+
+        if (isset($_POST['submit'])) {
+            $FirstName = $_POST['FirstName'];
+            $LastName = $_POST['LastName'];
+            $Email = $_POST['Email'];
+            $SID = $_POST['SID'];
+            $Password = $_POST['Password'];
+            $query = "INSERT INTO rusers (first_name, last_name) VALUES ('$FirstName', '$LastName', '$Email', '$SID', '$Password')";
+            mysqli_query($dbc, $query);	
+            echo "<p>提交成功</p>";
+        }
+    
+        mysqli_close($dbc);
     ?>
-</body>
-</html>
